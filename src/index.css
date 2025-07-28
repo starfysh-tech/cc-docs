@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-text font-sans;
+  }
+
+  code {
+    @apply font-mono;
+  }
+
+  /* Custom scrollbar for terminal theme */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-terminal-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-terminal-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-terminal-muted;
+  }
+}
+
+@layer components {
+  .terminal-window {
+    @apply bg-terminal-surface border border-terminal-border rounded-lg overflow-hidden;
+  }
+
+  .terminal-header {
+    @apply bg-terminal-bg border-b border-terminal-border px-4 py-2 flex items-center gap-2;
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .code-block {
+    @apply bg-terminal-bg border border-terminal-border rounded-md p-4 font-mono text-sm overflow-x-auto;
+  }
+
+  .nav-item {
+    @apply px-3 py-2 rounded-md text-terminal-muted hover:text-terminal-text hover:bg-terminal-surface transition-colors cursor-pointer;
+  }
+
+  .nav-item.active {
+    @apply text-terminal-accent bg-terminal-surface;
+  }
+}
