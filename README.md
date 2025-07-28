@@ -2,6 +2,8 @@
 
 Interactive documentation app showcasing Claude Code's complete capabilities, tools, and behavioral patterns.
 
+**🌐 [Live Demo](https://starfysh-tech.github.io/cc-docs/)**
+
 ## Overview
 
 This React application provides comprehensive documentation of Claude Code based on direct observation of its actual implementation, rather than external system prompts. It serves as a reference for developers to understand how to work effectively with Claude Code.
@@ -25,6 +27,9 @@ npm run dev
 
 # Build for production
 npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
 ```
 
 ## Documentation Sections
@@ -62,9 +67,29 @@ Clear documentation of:
 
 This documentation focuses exclusively on factually observable Claude Code behaviors. Where information is uncertain or unavailable, limitations are explicitly noted rather than guessed.
 
+## Deployment
+
+The app is automatically deployed to GitHub Pages when you run:
+
+```bash
+npm run deploy
+```
+
+This command builds the application and pushes it to the `gh-pages` branch, making it available at: https://starfysh-tech.github.io/cc-docs/
+
 ## Technology Stack
 
 - React 18 with TypeScript
 - Tailwind CSS for styling
 - Vite for build tooling
 - Lucide React for icons
+- GitHub Pages for hosting
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test locally with `npm run dev`
+5. Deploy with `npm run deploy` to test on GitHub Pages
+6. Submit a pull request
